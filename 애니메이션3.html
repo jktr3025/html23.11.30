@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            background-repeat: no-repeat;
+            padding: 50px;
+        }
+
+        .swing {
+            width: 500px;
+            position: relative;
+            animation: move 1.5s 0.5s infinite alternate;
+            transform-origin: 0 -30px;
+        }
+
+        .swing img {
+            width: 100%;
+            border: 5px double saddlebrown;
+        }
+
+        .swing::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid snow;
+            border-radius: 50%;
+            background: snow;
+            position: absolute;
+            left: 0;
+            top: -40px;
+        }
+        .swing::after{
+            content: "";
+            display: block;
+            border: 1px solid snow;
+            width: 20px;
+            height: 33px;
+            position: absolute;
+            left: 0;
+            top: -33px;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+        @keyframes move{
+            0%{
+                transform: rotate(3deg);
+            }
+            100%{
+                transform: rotate(-3deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="swing">
+        <img src="https://yekyong.cafe24.com/data/editor/1711/f475e62a10fc4f5ed5390e8cb63222a8_1510794781_9052.jpg"
+            alt="고흐">
+    </figure>
+</body>
+
+</html>

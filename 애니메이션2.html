@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            background-repeat: no-repeat;
+            padding: 50px;
+        }
+
+        .swing {
+            width: 500px;
+            position: relative;
+            transform-origin: top center;
+            /* transform-origin: 100px -100px; */
+            /* animation-name: girl;
+            animation-duration: 0.8s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out; */
+            animation: girl 0.8s alternate infinite ease-in-out;
+        }
+
+        .swing img {
+            width: 100%;
+            border: 6px solid darkblue;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .swing::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            /* border: 1px white solid; */
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            left: 50%;
+            top: -16px;
+            transform: translateX(-50%);
+        }
+
+        .swing::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            position: absolute;
+            left: 50%;
+            top: -11px;
+            transform: translateX(-50%) rotate(45deg);
+            box-sizing: border-box;
+            border-bottom: none;
+            border-right: none;
+
+        }
+
+        @keyframes girl {
+            0% {
+                transform: rotate(3deg);
+            }
+
+            100% {
+                transform: rotate(-3deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="swing">
+        <img src="https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4yJe/image/SrSJvjUOJQd4_C57piTFdc46x-I.jpg"
+            alt="진주귀걸이한소녀">
+    </figure>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: gainsboro;
+            padding: 50px;
+        }
+        .box{
+            float: left;
+            margin: 0 10px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .box:hover .flip{
+            transform: rotateY(180deg);
+        }
+        .flip{
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100px;
+            height: 200px;
+            transition: all 1s;
+        }
+        .face{
+            width: 100px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            color: snow;
+            position: absolute;
+            backface-visibility: hidden;
+            }
+        .front{
+            background: goldenrod;
+        }
+        .back{
+            background: tan;
+            transform: rotateY(180deg);
+        }
+
+        .btn{
+            width: 500px;
+            height: 500px;
+            margin: 300px auto;
+            clear: both;
+            border: 1px solid darkblue;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .b_inner{
+            width: 200px;
+            padding: 20px 0;
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            border-radius: 20px;
+            margin: 50px auto;
+            text-align: center;
+            color: navy;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px grey;
+            transform: rotateX(25deg);
+            box-shadow: 0 10px 5px dodgerblue , 0 3px 20px gray , inset 0 2px 0 pink, inset 0 0 3px palevioletred ;
+            transition: all 1s;
+        }
+        .b_inner:hover{
+            transform: rotateX(0deg);
+        }
+        .b_inner:active{
+            transform: rotateX(0deg);
+            box-shadow: 0 5px 5px dodgerblue , 0 3px 20px gray , inset 0 2px 0 pink, inset 0 0 3px palevioletred ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div><!-- flip -->
+    </div><!-- box -->
+
+    <div class="btn">
+        <div class="b_inner">Press Me</div>
+    </div>
+</body>
+
+</html>
